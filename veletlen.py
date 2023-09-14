@@ -1,5 +1,5 @@
 import random
-
+import string
 
 print("Melyik opciót szeretnéd választani:\n1. Számok Generálása\n2. Betűk generálása.\n3. ki.txt ellenőrzése számokkal\n4. ki.txt ellenőrzése betűkkel")
 
@@ -13,6 +13,16 @@ def fel1():
         for i in range(sz_db):
             x = random.randint(sz_also, (sz_felso))
             f.write(f"{x};")
+
+
+
+def felt2():
+    b_db = int(input("Mennyi betűt generáljon: "))
+    with open("ki.txt", "w", encoding="UTF-8") as f:
+            for i in range(20):
+                y = random.choice(string.ascii_letters)
+                f.write(f"{y};")
+
         
 
 
@@ -29,6 +39,7 @@ while True:
 
     elif valasztas == "2":
         print("2")
+        felt2()
         break
 
 
